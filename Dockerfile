@@ -30,7 +30,7 @@ WORKDIR /app
 
 # Copy the dist directory (client build files) to the root level
 COPY backend/dist ./dist
-
+COPY backend/.env ./
 # Create backend directory and copy the binary there
 RUN mkdir backend
 COPY --from=builder /app/target/release/backend ./backend/backend

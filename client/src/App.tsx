@@ -13,7 +13,7 @@ function App() {
     setLoading(true)
     setError(null)
     try {
-      const response = await fetch('http://0.0.0.0:8001/api/hello')
+      const response = await fetch('https://superdev.dhruvdeora.com/api/hello')
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
