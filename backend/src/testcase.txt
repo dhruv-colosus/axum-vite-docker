@@ -1,0 +1,20 @@
+POST /keypair
+POST /keypair
+POST /token/create payload: TokenCreateRequest { mint_authority: "B2UY29wPcL71jigJiM4hp45tEnhXJRnimYAZEWy8JV6J", mint: "3CrkqM8pPJafybHjKnGpc3eq4i3sHSj8331sWKbfiM1g", decimals: 6 }
+POST /token/create payload: TokenCreateRequest { mint_authority: "B2UY29wPcL71jigJiM4hp45tEnhXJRnimYAZEWy8JV6J", mint: "CS34Ycnz1cTH8ovF2PwiJ9zzmCagw3nECg86X24o1kgX", decimals: 6 }
+POST /token/create payload: TokenCreateRequest { mint_authority: "askdjkadsjkdsajkdajadkjk", mint: "asdadsdas", decimals: 6 }
+POST /message/sign payload: MessageSignRequest { message: Some("Hello, Solana!"), secret: Some("58Bq5wamh4Hjo2rC78suw7wPdPQeocGfMgkSxe4pkFNqQjv185zkzcR3vmKip7g4m5HVhSChKQFw4nBUX1YTH5gN") }
+POST /message/sign payload: MessageSignRequest { message: Some("Hello, Solana!"), secret: Some("secret") }
+POST /message/sign payload: MessageSignRequest { message: Some("Hello, Solana!"), secret: Some("58Bq5wamh4Hjo2rC78suw7wPdPQeocGfMgkSxe4pkFNqQjv185zkzcR3vmKip7g4m5HVhSChKQFw4nBUX1YTH5gN") }
+POST /message/sign payload: MessageSignRequest { message: Some("Goodbye, Solana!"), secret: Some("58Bq5wamh4Hjo2rC78suw7wPdPQeocGfMgkSxe4pkFNqQjv185zkzcR3vmKip7g4m5HVhSChKQFw4nBUX1YTH5gN") }
+POST /message/sign payload: MessageSignRequest { message: Some("Hello, Solana!"), secret: Some("58Bq5wamh4Hjo2rC78suw7wPdPQeocGfMgkSxe4pkFNqQjv185zkzcR3vmKip7g4m5HVhSChKQFw4nBUX1YTH5gN") }
+POST /message/sign payload: MessageSignRequest { message: Some("Hello, Solana!"), secret: Some("58Bq5wamh4Hjo2rC78suw7wPdPQeocGfMgkSxe4pkFNqQjv185zkzcR3vmKip7g4m5HVhSChKQFw4nBUX1YTH5gN") }
+POST /message/verify payload: MessageVerifyRequest { message: Some("Hello, Solana!"), signature: Some("oJcDMie/N6+LnYrigW/RySwu+8nFa/dUQgO5pVDwkdqeB+nYZeuXTWHQESK46IKtgEBT99nTv+TrFRCRHypNDg=="), pubkey: None }
+POST /send/sol payload: SendSolRequest { from: Some("7rt8SWbLixbxcUyLnEZoYthWQHCJhqS6rH97Nm3RbF9m"), to: Some("2RtLZWk6R7MHVGMA9uC1LQPpZGtgRPFSVqLdFpvGc3GM"), lamports: Some(1000000) }
+POST /send/sol payload: SendSolRequest { from: Some("4pSDjka4m1BVQhFbHw3HdmWxqeNV5Xv3gcpyRSBBrXrE"), to: Some("BUXpZFYfawUkMworNJASJu9tRa7GL8xobSjxZFudFn4x"), lamports: Some(0) }
+POST /send/sol payload: SendSolRequest { from: Some("sender"), to: Some("36AaSNLZLVoGK4ESHRFDnfLxQECLT3fEg4ufF1proTB6"), lamports: Some(1000000) }
+POST /send/sol payload: SendSolRequest { from: Some("21iZ172y29arQwXeqrBKYPrw8wPntzcYtzHGzptBmXkz"), to: Some("Bvh86jzEiALzFmmk3gHYetDsSf6mSdqsReK6iE6ik969"), lamports: Some(1000000) }
+POST /send/sol payload: SendSolRequest { from: Some("21iZ172y29arQwXeqrBKYPrw8wPntzcYtzHGzptBmXkz"), to: Some("Bvh86jzEiALzFmmk3gHYetDsSf6mSdqsReK6iE6ik969"), lamports: Some(1000000) }
+POST /send/sol payload: SendSolRequest { from: Some("CeEDATFnNGYAT2qqYJ5YdxrMyL5A7ihzbYUpxtk4HvuE"), to: Some("8hCw6tzcqqAs2y6puPgVSB1cZFgrgajNibsDhczKgnqX"), lamports: Some(200) }
+POST /send/token payload: SendTokenRequest { destination: Some("4WePKGwiRUxmJP6qSSEAz7zkGhcBPCqGBVSa7b6hDYhs"), mint: Some("EfUxoTZvB2MhLTpzKPFqe6BTxT4uYP55hGA8iCA7r88r"), owner: Some("29oYjP8mvcS6WWgCwY8wpKmqt45FfuVSejB4wicKJUnB"), amount: Some(1000000), decimals: None }
+POST /send/token payload: SendTokenRequest { destination: Some("8ishX8jPEf77GG2dy9CZDUkXkHSSrWCNSjdpJHjALpZa"), mint: None, owner: Some("Ch762jVPUNRArkhtsRRt2rZ3ENKwEFpM7ZNXCrHcHore"), amount: Some(1000000), decimals: None }
