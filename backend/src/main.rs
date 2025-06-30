@@ -27,7 +27,7 @@ async fn main() {
         .route("/hello", get(|| async { "Hello from Axum!" }));
 
     // ➋ Static files (relative to *binary working dir*)
-    let static_files = || ServeDir::new("./static")
+    let static_files = || ServeDir::new("../dist")
         // Axum 0.7: add `append_index_html_on_directories` if you want "about" to load /about/index.html
         .append_index_html_on_directories(true);
 
@@ -40,7 +40,7 @@ async fn main() {
         // .fallback_service(static_files())
         .layer(cors);          
 
-    let addr: SocketAddr = ([127, 0, 0, 1], 8001).into();
+    let addr: SocketAddr = ([0, 0, 0, 0], 8001).into();
     println!("Listening on http://{}", addr);
 
     let listener = tokio::net::TcpListener::bind(addr).await.unwrap();

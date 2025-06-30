@@ -1,0 +1,21 @@
+{
+  "name": "axum-sol",
+  "version": "1.0.0",
+  "description": "Full-stack Solana application with Rust Axum backend and React frontend",
+  "private": true,
+  "scripts": {
+    "docker:build": "docker build -t axum-sol-backend .",
+    "docker:run": "docker run -p 8001:8001 axum-sol-backend",
+    "docker:run:detached": "docker run -d -p 8001:8001 --name axum-sol-backend axum-sol-backend",
+    "docker:stop": "docker stop axum-sol-backend || true",
+    "docker:remove": "docker rm axum-sol-backend || true",
+    "docker:logs": "docker logs axum-sol-backend",
+    "docker:clean": "docker stop axum-sol-backend || true && docker rm axum-sol-backend || true",
+    "docker:restart": "pnpm docker:clean && pnpm docker:run:detached",
+    "docker:rebuild": "pnpm docker:build && pnpm docker:restart",
+    "docker:ps": "docker ps -a | grep axum-sol-backend || echo 'No axum-sol-backend containers found'",
+    "client:dev": "cd client && pnpm dev",
+    "client:build": "cd client && pnpm build",
+    "client:install": "cd client && pnpm install"
+  }
+}
